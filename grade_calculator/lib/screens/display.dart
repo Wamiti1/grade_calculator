@@ -81,6 +81,7 @@ class ResultsTable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DataTable(
+      headingRowColor: const WidgetStatePropertyAll(Color.fromARGB(255, 81, 7, 255)),
       columns: const [
         DataColumn(label: Text('Subject')),
         DataColumn(label: Text('Marks')),
@@ -96,7 +97,7 @@ class ResultsTable extends StatelessWidget {
 
 late List<DataRow> generated = List.generate(results.length, (index){
   return DataRow(
-    
+
     color: WidgetStatePropertyAll(index.isEven? Colors.blueGrey: Colors.black),
     cells: [
       DataCell(Text(results.entries.toList()[index].key)),
