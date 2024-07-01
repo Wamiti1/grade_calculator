@@ -95,7 +95,7 @@ class ResultsTable extends StatelessWidget {
       rows:  generated);
   }
 
-late List<DataRow> generated = List.generate(results.length, (index){
+late final List<DataRow> generated = List.generate(results.length, (index){
   return DataRow(
 
     color: WidgetStatePropertyAll(index.isEven? Colors.blueGrey: Colors.black),
