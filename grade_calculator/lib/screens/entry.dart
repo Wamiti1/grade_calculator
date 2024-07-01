@@ -13,14 +13,14 @@ class Input extends StatefulWidget {
 
 class _InputState extends State<Input> {
   final formKey = GlobalKey<FormState>();
-  final mathsController = TextEditingController();
-  final englishController = TextEditingController();
-  final kiswahiliController = TextEditingController();
-  final physicsController = TextEditingController();
-  final chemistryController = TextEditingController();
-  final biologyController = TextEditingController();
-  final historyController = TextEditingController();
-  final compController = TextEditingController();
+  final mathsController = TextEditingController(text: '88');
+  final englishController = TextEditingController(text: '88');
+  final kiswahiliController = TextEditingController(text: '88');
+  final physicsController = TextEditingController(text: '88');
+  final chemistryController = TextEditingController(text: '88');
+  final biologyController = TextEditingController(text: '88');
+  final historyController = TextEditingController(text: '88');
+  final compController = TextEditingController(text: '88');
   
   
   

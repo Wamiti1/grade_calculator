@@ -22,6 +22,8 @@ class _ResultsState extends State<Results> {
         children: [
           Text(widget.results.toString()),
           Text((widget.results.values.reduce((sum, element)=> sum+element)).toString()),
+
+          ResultsTable(results: widget.results),
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Table(
@@ -67,7 +69,50 @@ class _ResultsState extends State<Results> {
     );
   }
 
-  
+
+
+
+}
+
+class ResultsTable extends StatelessWidget {
+   ResultsTable({super.key, required this.results});
+  final Map<String, int> results;
+
+  @override
+  Widget build(BuildContext context) {
+    return DataTable(
+      columns: const [
+        DataColumn(label: Text('Subject')),
+        DataColumn(label: Text('Marks')),
+        DataColumn(label: Text('Passed'))
+        
+
+      ], 
+      
+      
+      // ignore: prefer_const_literals_to_create_immutables
+      rows:  generated);
+  }
+
+late List<DataRow> generated = List.generate(results.length, (index){
+  return DataRow(
+    
+    color: WidgetStatePropertyAll(index.isEven? Colors.blueGrey: Colors.black),
+    cells: [
+      DataCell(Text(results.entries.toList()[index].key)),
+      DataCell(Text(results.entries.toList()[index].value.toString())),
+      DataCell(
+        Checkbox(
+          checkColor: Colors.blue,
+          activeColor: Colors.redAccent,
+        value:  results.entries.toList()[index].value > 70,
+        onChanged: (bool? value){},)
+        
+        )
+    ],
+  );
+});
+
 
 }
 
