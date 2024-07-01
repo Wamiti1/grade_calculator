@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
-import 'package:grade_calculator/screens/input.dart';
+import 'package:grade_calculator/screens/entry.dart';
 
 void main() {
   runApp(MaterialApp(
