@@ -94,7 +94,7 @@ class ResultsTable extends StatelessWidget {
       headingRowColor: const WidgetStatePropertyAll(Color.fromARGB(255, 81, 7, 255)),
       columns: const [
         DataColumn(label: Text('Subject')),
-        DataColumn(label: Text('Marks')),
+        DataColumn(label: Text('Marks'), numeric: true),
         DataColumn(label: Text('Passed'))
         
 
